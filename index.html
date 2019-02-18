@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Profil</title>
+    <meta charset="utf-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+</head> 
+<body>
+     <div class="container container-fluid row">
+     
+      <div class="left-menu col-lg-4 col-md-4 col-sm-5 col-xs-12">
+      <ul>
+          <li ><a href="#MonProfil"><button class="btn active">Mon Profil</button></a></li>
+          <li ><a href="#Contacts"><button class="btn ">Contacts</button></a></li>
+          <li ><a href="#Confidentialité"><button class="btn ">Confidentialité</button></a></li>
+          <li ><a href="#MeDéconnecter"><button class="btn">Me Déconnecter</button></a></li>
+      </ul>
+      </div>
+      <div class="divider-vertical"></div>
+      <div class="profile-content col-lg-6 col-md-6 col-sm-7 col-xs-12">
+            <h1>Mon profil</h1>
+        <div class="name-style common-style">
+          <div>Nom<span>&nbsp;</span></div>
+          <div>Dominique Wilkins</div>
+       </div>
+       <div class="password-style common-style">
+            <div>Mon Mot De Passe</div>
+            <div><button class="btn" onclick="showHideDiv('msg')">Modifier Votre Mot De Passe</button></div>
+            <div class="mdp-style" id="msg">
+            <form onsubmit="checkForm()">
+                <div class="form-group  common-style">
+                       <label class="mdp" id="oldP">Ancienne mot de passe</label>
+                       <input type="password" class="form-control">
+                </div>
+            
+            
+                <div class="form-group  common-style ">
+                       <label class="mdp" id="newP">Nouvelle mot de passe</label>
+                       <input type="password" class="form-control">
+                </div>
+            
+
+                <div class="form-group  common-style">
+                       <label class="mdp" id="confirmP">Confirmer mot de passe</label>
+                       <input type="password" class="form-control">
+                </div>
+            </form>
+            <button class="submit-btn" type="submit"> Envoyer</button>>
+       </div>
+        
+         <form>
+         <div class="form-group email-style common-style">
+                <label>Adresse e-mail</label>
+                <input type="email" class="form-control" placeholder="dominique.wilkins@gmail.com" id="mail" name="email">
+         </div>
+          </form>
+          
+          <form>
+         <div class="form-group email-style common-style">
+                <label>Mobile</label>
+                <input type="number" class="form-control" placeholder="06 67 71 82 93" id="mobileNum" onKeypress="normalizeNumber()">
+         </div>
+        <div class="checkbox-style">
+            <input type="checkbox">
+            <label>Je souhaite m'abonner à la newsletter</label>
+        </div>
+        </form>
+    
+    
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-0 "></div>
+      <button class="btn disconnect-btn"><a href="#MeDéconnecter">Me Déconnecter</a></button>
+      
+    </div>
+<script src="test.js"></script>
+</body>   
+</html>
